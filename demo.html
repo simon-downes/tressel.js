@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Tressel.js - jQuery Tree Selector</title>
+	<meta name="author" content="Simon Downes">
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+	<link href="./src/jquery.tressel.css" rel="stylesheet">
+	<style type="text/css">
+		body {
+			border-top: 10px solid #333333;
+		}
+		#page {
+			width: 960px;
+			margin: 50px auto;
+		}
+
+		h1 {
+			border-bottom: 5px solid #c0c0c0;
+			padding-bottom: 15px;
+			margin-bottom: 20px;
+		}
+
+		#page section {
+			border-bottom: 1px solid #f0f0f0;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+<div id="page">
+	
+	<h1>Tressel.js</h1>
+	
+	<section>
+		
+		<p>Tressel.js is a jQuery plugin that converts a list into a pretty tree selector.</p>
+
+		<h3>Demo</h3>
+		
+		<p>
+			<button id="btn-tressel" class="btn" type="button">Tressel It</button>
+			<button id="btn-selection" class="btn" type="button">Get Selection</button>
+		</p>
+
+<ul id="demo">
+	<li id="loc-1" data-tressel="all">All
+		<ul>
+			<li id="loc-2" data-tressel="north-america">North America
+				<ul>
+					<li id="loc-4" data-tressel="US">United States
+						<ul>
+							<li id="loc-8" data-tressel="AZ">Arizona
+								<ul>
+									<li id="loc-23" data-tressel="tuscon">Tuscon</li>
+								</ul>
+							</li>
+							<li id="loc-9" data-tressel="CA">California
+								<ul>
+									<li id="loc-24" data-tressel="los-angeles">Los Angeles</li>
+									<li id="loc-25" data-tressel="san-francisco">San Francisco</li>
+								</ul>
+							</li>
+							<li id="loc-10" data-tressel="GA">Georgia
+								<ul>
+									<li id="loc-26" data-tressel="atlanta">Atlanta</li>
+								</ul>
+							</li>
+							<li id="loc-11" data-tressel="NV">Nevada
+								<ul>
+									<li id="loc-27" data-tressel="las-vegas">Las Vegas</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li id="loc-5" data-tressel="canada">Canada
+						<ul>
+							<li id="loc-12" data-tressel="british-columbia">British Columbia
+								<ul>
+									<li id="loc-28" data-tressel="vancouver">Vancouver</li>
+								</ul>
+							</li>
+							<li id="loc-13" data-tressel="ontario">Ontario
+								<ul>
+									<li id="loc-29" data-tressel="toronto">Toronto</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li id="loc-3" data-tressel="europe">Europe
+				<ul>
+					<li id="loc-6" data-tressel="GB">United Kingdom
+						<ul>
+							<li id="loc-14" data-tressel="birmingham">Birmingham</li>
+							<li id="loc-15" data-tressel="brighton">Brighton</li>
+							<li id="loc-16" data-tressel="london">London</li>
+							<li id="loc-17" data-tressel="mancester">Mancester</li>
+						</ul>
+					</li>
+					<li id="loc-7" data-tressel="FR">France
+						<ul>
+							<li id="loc-18" data-tressel="bordeaux">Bordeaux</li>
+							<li id="loc-19" data-tressel="calais">Calais</li>
+							<li id="loc-20" data-tressel="lyon">Lyon</li>
+							<li id="loc-21" data-tressel="marseille">Marseille</li>
+							<li id="loc-22" data-tressel="paris">Paris</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+		<h3>License</h3>
+
+		<p><a href="">MIT License</a></p>
+
+	</section>
+
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./src/jquery.tressel.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$('#btn-tressel').on('click', function() {
+			$('#demo').tressel();
+		});
+
+		$('#btn-selection').on('click', function() {
+			alert($('#demo').tressel('selected', true));
+		});
+
+	});
+</script>
+
+</body>
+</html>

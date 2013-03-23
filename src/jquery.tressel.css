@@ -1,0 +1,111 @@
+/*
+    Tressel.js
+    Copyright (c) 2013 Simon Downes - http://simondownes.co.uk
+    License: http://www.opensource.org/licenses/mit-license.php
+*/
+.tressel, .tressel ul {
+	list-style-type: none;
+	margin-left: 10px;
+}
+
+.tressel span.expander {
+	width: 15px;
+	height: 15px;
+	display: block;
+	position: absolute;
+	left: -19px;
+	top: 7px;
+	background: url('plus.png') no-repeat 3px 3px;
+}
+
+.tressel span.expander.hide {
+	background-image: url('minus.png');
+}
+
+.tressel ul {
+	display:none;
+}
+
+.tressel li {
+	border-left: 1px solid #7F7F7F;
+	padding: 2px 0 0 10px;
+	background: url('join.png') no-repeat 0 center;
+}
+
+.tressel li.parent {
+	background-position: 0 17px;
+}
+
+.tressel li:last-child {
+	border: none;
+	background: url('join-bottom.png') no-repeat 0 -2px;
+}
+
+.tressel > li.parent {
+	background: url('join.png') no-repeat 0 15px;
+}
+
+.tressel > li.parent > span.item > span.expander {
+	top: 5px;
+}
+
+.tressel .container {
+	background: url('plus.png') no-repeat;
+}
+
+.tressel span.checkbox {
+	display: block;
+	height: 13px;
+	width: 14px;
+	background: white;
+	border: 1px solid #cccccc;
+	padding:0;
+	min-height:0;
+	top: 5px;
+	right: 10px;
+	position: absolute;
+	border-radius: 3px;
+}
+
+.tressel li.selected > span.item > span.checkbox {
+	background: white url('tick.png') no-repeat 2px 2px;
+}
+
+.tressel li.selected span.item {
+	border: 1px dashed #8FB62B;
+	background-color: #CCE694;
+	color: #468847;
+}		
+
+.tressel li.selected > span.item {
+	border: 1px solid #8FB62B;
+}
+
+.tressel span.item {
+	border: 1px solid #CEE8E6;
+	background: #CEE8E6;
+
+
+	border: 1px solid rgb(188, 232, 241);
+	color: #3A87AD;
+	background: #D9EDF7;
+
+	border-radius: 3px 3px 3px 3px;
+	margin: 0;
+	padding: 3px 10px;
+	vertical-align: middle;
+	position: relative;
+	display: block;
+	cursor: pointer;
+}
+
+.tressel span.item:hover {
+	background-color: #9ED2CE;
+	border-color: #9ED2CE;
+
+	background: #3A87AD;
+	border-color: #3A87AD;
+	color: #eeeeee;
+
+
+}
