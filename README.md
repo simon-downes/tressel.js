@@ -15,4 +15,4 @@ Checkout demo.html for examples.
 
 ## License
 
-[MIT License](http://en.wikipedia.org/wiki/MIT_License)
+[MIT License](https://github.com/simon-downes/tressel.js/blob/master/LICENSE)
